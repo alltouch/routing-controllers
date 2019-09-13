@@ -337,7 +337,8 @@ export class ExpressDriver extends BaseDriver {
             } else {
                 options.response.send(result);
             }
-            options.next();
+            // NOTICE: UseAfter hooks will be disabled by commenting next line
+            // options.next();
         }
     }
 
