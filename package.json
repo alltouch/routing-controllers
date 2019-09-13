@@ -17,12 +17,18 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/pleerock/routing-controllers.git"
+    "url": "https://github.com/alltouch/routing-controllers.git"
   },
   "bugs": {
-    "url": "https://github.com/pleerock/routing-controllers/issues"
+    "url": "https://github.com/alltouch/routing-controllers/issues"
   },
-  "main": "index.js",
+  "main": "./build/compiled/src/index.js",
+  "types": "./build/compiled/src/index.d.ts",
+  "module": "./src/index.ts",
+  "files": [
+    "build/*",
+    "src/*"
+  ],
   "tags": [
     "express",
     "express.js",
@@ -83,14 +89,14 @@
     "request": "^2.81.0",
     "sinon": "^2.1.0",
     "sinon-chai": "^2.9.0",
-    "ts-node": "^3.0.2",
+    "ts-node": "^3.3.0",
     "tslint": "^5.0.0",
     "tslint-stylish": "^2.1.0",
     "typedi": "~0.7.1",
     "typescript": "~2.7.2"
   },
   "scripts": {
-    "test": "cross-env NODE_ENV=test gulp tests"
-  },
-  "typings": "index.d.ts"
+    "test": "cross-env NODE_ENV=test gulp tests",
+    "build": "gulp compile"
+  }
 }
